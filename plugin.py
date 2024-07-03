@@ -17,7 +17,8 @@ import os
 import subprocess
 import sys
 ext_libs_path = os.path.join(os.path.dirname(__file__), 'ext_libs')
-sys.path.append(ext_libs_path)
+if ext_libs_path not in sys.path:
+    sys.path.append(ext_libs_path)
 from qgis.PyQt.QtCore import QSettings, QTranslator, qVersion, QCoreApplication
 from qgis.PyQt.QtWidgets import QAction, QMessageBox, QApplication, QMenu
 from qgis.PyQt.QtGui import QIcon

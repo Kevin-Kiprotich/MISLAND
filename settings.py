@@ -75,12 +75,12 @@ class DlgSettings(QtWidgets.QDialog, Ui_DlgSettings):
         self.dlg_settings_edit.exec_()
 
     def forgot_pwd(self):
-        url=QUrl('http://misland-africa.oss-online.org/#/forgot-password')
-        QDesktopServices.openUrl(url)
-        # dlg_settings_edit_forgot_password = DlgSettingsEditForgotPassword()
-        # ret = dlg_settings_edit_forgot_password.exec_()
-        # if ret and dlg_settings_edit_forgot_password.ok:
-        #     self.done(QtWidgets.QDialog.Accepted)
+        # url=QUrl('http://misland-africa.oss-online.org/#/forgot-password')
+        # QDesktopServices.openUrl(url)
+        dlg_settings_edit_forgot_password = DlgSettingsEditForgotPassword()
+        ret = dlg_settings_edit_forgot_password.exec_()
+        if ret and dlg_settings_edit_forgot_password.ok:
+            self.done(QtWidgets.QDialog.Accepted)
 
 
 class DlgSettingsRegister(QtWidgets.QDialog, Ui_DlgSettingsRegister):
